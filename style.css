@@ -384,7 +384,7 @@ footer {
         width: 90%;
     }
 }
-@media(min-width:748px){
+@media(min-width:740px){
     .sect-h1-div{
         padding-left: 2cm;
         padding-top: 1cm;
