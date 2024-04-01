@@ -416,7 +416,10 @@ footer {
     margin-bottom: 1.5cm;
   }
   .sect-h1-div {
-    padding-left: 3cm !important;
+    padding-left: 3cm ;
+  }
+  .motto-wrapper{
+    display: none !important;
   }
   .ads {
     padding-left: 10%;
