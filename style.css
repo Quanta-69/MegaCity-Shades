@@ -27,15 +27,14 @@ section {
   margin-top: 1cm;
 }
 .sect-h1 {
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-left: 0.2cm;
-  font-size: 2rem;
-  border-left: 5px solid var(--burnt-orange);
+  text-align: center;
+  border-bottom: 5px solid var(--burnt-orange);
+  width: max-content;
 }
 .sect-h1-div {
-  padding-left: 4.5cm;
   padding-top: 1cm;
+  text-align: center;
+  width:50%;
 }
 /*NAVBAR SECTION*/
 .header{
@@ -78,15 +77,15 @@ section {
   font-weight: 600;
   cursor: default;
 }
-.navbar a {
+.navbar-main a {
   color: #fff;
-  font-size: 18px;
+  font-size: 20px;
   text-decoration: none;
   margin-left: 35px;
   transition: 0.3s;
 }
 
-.navbar a:hover {
+.navbar-main a:hover {
   color: #f00;
 }
 
@@ -120,15 +119,7 @@ section {
   margin-top: 1cm;
   height: max-content;
 }
-.a-h1-div {
-  padding-left: 5cm;
-  padding-top: 1cm;
-}
-.svg{
-  color: red;
-  height:50px;
-  width: 50px;
-}
+
 /*PRODUCTS AND SERVICES*/
 .services {
   margin-top: 1cm;
@@ -136,15 +127,9 @@ section {
   height:max-content;
 }
 .s-h1-div {
-  padding-left: 5cm;
   padding-top: 1cm;
 }
-.services .s-h1 {
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-left: 0.2cm;
-  border-left: 5px solid var(--burnt-orange);
-}
+
 .service-card{
   border: 1px solid var(--burnt-orange);
   height: 5cm;
@@ -157,17 +142,8 @@ section {
   background-color: var(--white);
   margin-bottom: 2.5cm;
 }
-.p-h1-div {
-  padding-left: 5cm;
-  padding-top: 1cm;
-}
-.p-h1 {
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-left: 0.2cm;
-  font-size: 2rem;
-  border-left: 5px solid var(--burnt-orange);
-}
+
+
 .products-container {
   display: flex;
   flex-wrap: wrap;
@@ -179,7 +155,7 @@ section {
   margin: 10px;
   padding: 10px;
   text-align: center;
-  border: 1px solid black;
+  border: 1px solid rgba(0, 0, 0, 0.4);
   position: relative;
 }
 .image {
@@ -232,17 +208,6 @@ section {
 .adverts {
   background-color: var(--light-color);
   height: max-content;
-}
-.ads-h1-div {
-  padding-left: 5cm;
-  padding-top: 1cm;
-}
-.ads-h1 {
-  padding-top: 0.7rem;
-  padding-bottom: 0.7rem;
-  padding-left: 0.2cm;
-  font-size: 2rem;
-  border-left: 5px solid var(--burnt-orange);
 }
 .ads {
   display: flex;
@@ -297,14 +262,14 @@ footer {
 }
 
 .footer-content {
-  display: block;
-  justify-content: space-between;
+  display: flex;
+  justify-content: space-evenly;
   align-items: center;
   flex-wrap: wrap;
 }
 
 .info {
-  display: flex;
+  display: block;
   flex-wrap: wrap;
   margin-left: 40px;
 }
@@ -329,11 +294,9 @@ footer {
 /*FOOTER END*/
 @media (max-width: 425px) {
   .sect-h1 {
-    font-size: 1.7rem;
-  }
-  .sect-h1-div {
-    padding-top: 1cm !important;
-    padding-left: 1cm !important;
+    font-size: 1.9rem;
+    margin-bottom: 1cm;
+    margin-left: 30vw;
   }
   .services {
     height: 21cm;
@@ -354,14 +317,24 @@ footer {
   .products-container {
     display: block;
   }
+  .link-wrapper{
+    padding-left: 0.5cm;
+    display: flex;
+  }
 }
 
 @media (max-width: 768px) {
+  .sect-h1-div{
+    margin: auto;
+  }
+  .sect-h1{
+    margin: auto;
+  }
   #menu-icon {
     display: block;
   }
 
-  .navbar {
+  .navbar-main {
     position: absolute;
     top: 100%;
     left: 0;
@@ -370,11 +343,11 @@ footer {
     display: none;
   }
 
-  .navbar.active {
+  .navbar-main .active {
     display: block;
   }
 
-  .navbar a {
+  .navbar-main a {
     display: block;
     margin: 1.5rem 0;
   }
@@ -384,11 +357,11 @@ footer {
     top: 79px;
     left: 0;
     width: 100%;
-    height: 295px;
-    background: rgba(255, 255, 255, 0.1);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+    height: 350px;
+    background: rgba(0, 0, 0, 0.4);
+    border-bottom: 2px solid rgba(0, 0, 0, 0.2);
     backdrop-filter: blur(10px);
-    z-index: 1;
+    z-index: -1;
     display: none;
   }
 
@@ -400,17 +373,12 @@ footer {
     flex-wrap: wrap;
     width: 90%;
   }
-  .sect-h1-div {
-    padding-left: 1cm;
-    padding-top: 1cm;
-  }
+ .active{
+  display: block;
+ }
 }
 
 @media (min-width: 748px) {
-  .sect-h1-div {
-    padding-left: 2cm;
-    padding-top: 1cm;
-  }
   .card {
     width: 70%;
   }
@@ -427,12 +395,6 @@ footer {
 
 
 @media (min-width: 1024px) {
-  .sect-h1 {
-    margin-bottom: 1.5cm;
-  }
-  .sect-h1-div {
-    padding-left: 3cm ;
-  }
   .motto-wrapper{
     display: none !important;
   }
@@ -444,19 +406,11 @@ footer {
     flex-wrap: wrap !important;
   }
   .card {
-    width: 492px;
+    width: 390px;
   }
 }
-@media (max-width: 1024px) {
-  .main-nav-ul {
-    display: none !important;
-  }
-}
+
 @media (min-width: 768px) {
-  .sect-h1-div {
-    padding-left: 2.3cm;
-    padding-top: 1cm;
-  }
   .services {
     margin-top: 6cm;
   }
