@@ -1,21 +1,20 @@
 :root {
   --white: #fff;
-  --burnt-orange: rgb(181, 120, 7);
-  --dark-color: rgb(64, 64, 64);
+  --main-color:rgb(5, 193, 193);
+  --dark-color: #121212;
   --light-color: rgb(235, 235, 235);
-  --nav-bg: #2e2e2e;
-  --orange: orange;
+  --nav-bg: #191818;
   --percent-50: 120%;
   --percent-100: 300%;
 }
 body {
   font-family: sans-serif !important;
   min-height: 100vh;
-  background-color: var(--white);
+  background-color: var(--dark-color);
 }
-.h1 {
+h1 {
   text-align: center;
-  color: royalblue;
+  color: white;
   font-size: 2rem;
 }
 p {
@@ -25,10 +24,11 @@ p {
 }
 section {
   margin-top: 1cm;
+  background-color: var(--nav-bg);
 }
 .sect-h1 {
   text-align: center;
-  border-bottom: 5px solid var(--burnt-orange);
+  border-bottom: 5px solid var(--main-color);
   width: max-content;
 }
 .sect-h1-div {
@@ -71,7 +71,7 @@ section {
   left: 100%;
 }
 .logo {
-  color: #fff;
+  color: var(--main-color);
   font-size: 25px;
   text-decoration: none;
   font-weight: 600;
@@ -86,7 +86,7 @@ section {
 }
 
 .navbar-main a:hover {
-  color: #f00;
+  color: var(--main-color);
 }
 
 #menu-icon {
@@ -99,7 +99,7 @@ section {
 
 .main-header {
   height: 20cm;
-  background-image: url(skyscrapers_in_the_sunset-wallpaper-1920x1080.jpg);
+  background-image: url(Logo\ Colors.jpeg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -123,7 +123,6 @@ section {
 /*PRODUCTS AND SERVICES*/
 .services {
   margin-top: 1cm;
-  background-color: var(--light-color);
   height:max-content;
 }
 .s-h1-div {
@@ -131,7 +130,7 @@ section {
 }
 
 .service-card{
-  border: 1px solid var(--burnt-orange);
+  border: 1px solid var(--main-color);
   height: 5cm;
   border-radius: 0.1cm;
 }
@@ -139,7 +138,7 @@ section {
 /*PRODUCTS SECTION*/
 
 .products {
-  background-color: var(--white);
+  background-color: var(--nav-bg);
   margin-bottom: 2.5cm;
 }
 
@@ -151,6 +150,7 @@ section {
 }
 .card {
   width: 400px;
+  background-color: transparent;
   height: max-content;
   margin: 10px;
   padding: 10px;
@@ -186,13 +186,14 @@ section {
   opacity: 1;
 }
 .content h3 {
-  font-size: 55px;
-  color: var(--orange);
+  font-size: 45px;
+  color: var(--main-color);
 }
 
 .content p {
   font-size: 20px;
   color: aliceblue;
+  display: none;
 }
 .content > * {
   transform: translateY(25px);
@@ -206,7 +207,7 @@ section {
 /*ADVERTISMENTS*/
 
 .adverts {
-  background-color: var(--light-color);
+  background-color: var(--nav-bg);
   height: max-content;
 }
 .ads {
@@ -219,7 +220,7 @@ section {
   width: 300px;
   text-align: center;
   padding: 50px;
-  border: 1px solid var(--burnt-orange);
+  border: 1px solid var(--main-color);
   border-radius: 0.1cm;
   margin-bottom: 1.5cm;
 }
@@ -228,14 +229,16 @@ section {
 .ads-card p {
 }
 .ads-card button {
+  background: transparent;
   width: 100px;
   height: 30px;
   border-radius: 0.1cm;
-  border: 1px solid var(--burnt-orange);
+  color: white;
+  border: 1px solid var(--main-color);
   transition: 0.2s;
 }
 .ads-card button:hover {
-  background: var(--burnt-orange);
+  background: var(--main-color);
   color: white;
 }
 
@@ -243,7 +246,7 @@ section {
   text-align: center;
 }
 .link-wrapper svg {
-  color: var(--burnt-orange);
+  color: var(--main-color);
   width: 50px;
   height: 50px;
   margin: 0.3cm;
@@ -254,7 +257,7 @@ section {
 }
 /*FOOTER SECTION*/
 footer {
-  background-color: #333;
+  background-color: var(--nav-bg);
   color: #fff;
   padding: 20px;
   text-align: center;
